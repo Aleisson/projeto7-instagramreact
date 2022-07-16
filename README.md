@@ -1,5 +1,4 @@
-Driven - Projeto #05 - Bate Papo UOL
-
+Driven - Projeto #07 - Instagram [React]
 Este projeto foi solicitado dia 11/07/2022 (9º semana da turma 07 - Módulo 2: Single-page applications) na aula de Desenvolvimento web ministrada Prof. Lele;
 
 Descrição:
