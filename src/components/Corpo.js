@@ -7,11 +7,11 @@ function Corpo() {
     return (
         <div class="corpo">
             <div class="esquerda">
-                <Stories />
+                <Stories  />
                 <Posts />
             </div>
 
-            <SideBar />   
+            <SideBar src="assets/img/catanacomics.svg"  page="catanacomics" usuario="Catana"/>   
         </div>
     );
 }

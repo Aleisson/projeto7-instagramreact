@@ -1,5 +1,5 @@
 
-function SideBar() {
+function SideBar(props) {
 
     const sugestoes = [
         {nome: "bad.vibes.memes", razao: "Segue você" },
@@ -13,10 +13,10 @@ function SideBar() {
     return (
         <div class="sidebar">
             <div class="usuario">
-                <img src="assets/img/catanacomics.svg" />
+                <img src={props.src}/>
                 <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
+                    <strong>{props.page}</strong>
+                    {props.usuario}
                 </div>
             </div>
 
