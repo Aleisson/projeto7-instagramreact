@@ -1,4 +1,4 @@
-
+import Sugestao from "./Sugestao";
 function SideBar(props) {
 
     const sugestoes = [
@@ -26,17 +26,7 @@ function SideBar(props) {
                     <div>Ver tudo</div>
                 </div>
                {sugestoes.map(sugestao => 
-                    <div class="sugestao">
-                    <div class="usuario">
-                        <img src={"assets/img/"+sugestao.nome+".svg"} />
-                        <div class="texto">
-                            <div class="nome">{sugestao.nome}</div>
-                            <div class="razao">{sugestao.razao}</div>
-                        </div>
-                    </div>
-
-                    <div class="seguir">Seguir</div>
-                </div>
+                    <Sugestao src={"assets/img/"+sugestao.nome+".svg"} nome={props.nome} razao={sugestao.razao}/>
                )}
 
             </div>

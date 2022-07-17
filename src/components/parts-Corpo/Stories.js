@@ -1,3 +1,5 @@
+import Story from "./Story";
+
 
 function Stories() {
 
@@ -16,14 +18,7 @@ function Stories() {
     return (
         <div class="stories">
             {stories.map(story =>
-                <div class="story">
-                    <div class="imagem">
-                        <img src={"assets/img/"+story+".svg"} />
-                    </div>
-                    <div class="usuario">
-                        {story}
-                    </div>
-                </div>
+                <Story src={"assets/img/" + story + ".svg" } user={story}/>
             )}
             <div class="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
