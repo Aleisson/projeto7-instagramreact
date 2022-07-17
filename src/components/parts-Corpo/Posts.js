@@ -1,3 +1,4 @@
+import React from "react";
 
 function Posts() {
 
@@ -16,6 +17,9 @@ function Posts() {
         }
     ]
 
+    const [tipoHeart, setTipo] = React.useState("heart-outline");
+
+
     return (
         <div class="posts">
 
@@ -23,7 +27,7 @@ function Posts() {
                 <div class="post">
                     <div class="topo">
                         <div class="usuario">
-                            <img src={"assets/img/"+ post.usuario +".svg"} />
+                            <img src={"assets/img/" + post.usuario + ".svg"} />
                             meowed
                         </div>
                         <div class="acoes">
@@ -31,14 +35,26 @@ function Posts() {
                         </div>
                     </div>
 
-                    <div class="conteudo">
-                        <img src={"assets/img/"+post.img+".svg"} />
+                    <div onClick={() => {
+                        if (tipoHeart === "heart-outline") {
+                            setTipo("heart");
+                        } else {
+                            setTipo("heart-outline")
+                        }
+                    }} class="conteudo">
+                        <img src={"assets/img/" + post.img + ".svg"} />
                     </div>
 
                     <div class="fundo">
                         <div class="acoes">
                             <div>
-                                <ion-icon name="heart-outline"></ion-icon>
+                                <ion-icon onClick={() => {
+                                    if (tipoHeart === "heart-outline") {
+                                        setTipo("heart");
+                                    } else {
+                                        setTipo("heart-outline")
+                                    }
+                                }} name={tipoHeart}></ion-icon>
                                 <ion-icon name="chatbubble-outline"></ion-icon>
                                 <ion-icon name="paper-plane-outline"></ion-icon>
                             </div>
@@ -48,7 +64,7 @@ function Posts() {
                         </div>
 
                         <div class="curtidas">
-                            <img src={"assets/img/"+post.curtiu+".svg"} />
+                            <img src={"assets/img/" + post.curtiu + ".svg"} />
                             <div class="texto">
                                 Curtido por <strong>{post.curtiu}</strong> e <strong>{post.curtidas}</strong>
                             </div>

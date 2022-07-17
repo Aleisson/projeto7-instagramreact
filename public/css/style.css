@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   background-color: #FAFAFA;
   margin: 54px 0 0;
@@ -193,6 +195,10 @@ body {
 
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
+}
+
+ion-icon[name="heart"]{
+  color:#ED4956;
 }
 
 .post .fundo .curtidas {
